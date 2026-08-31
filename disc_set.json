@@ -1,0 +1,28 @@
+{
+  "disc_count": 2,
+  "verdict": "data-only",
+  "differing_program_fields": [],
+  "warnings": [],
+  "discs": [
+    {
+      "index": 1,
+      "cue_name": "disc1.cue",
+      "cue_path": "disc1.cue",
+      "serial": "SLUS-01294",
+      "boot_exe": "SLUS_012.94",
+      "entry_pc": "0x80087DE0",
+      "track_count": 1,
+      "required_disc_fp": "b89de611cb4e68d4d394ae7ec27639f855fbceb9d8d890cf4a141ae4d9d0a217"
+    },
+    {
+      "index": 2,
+      "cue_name": "disc2.cue",
+      "cue_path": "disc2.cue",
+      "serial": "SLUS-01314",
+      "boot_exe": "SLUS_013.14",
+      "entry_pc": "0x80087DE0",
+      "track_count": 1,
+      "required_disc_fp": "5cb2ecbdf7126bacbd5f48ade401eb07d48f8e3e5631caf38e396c3a6712a8d1"
+    }
+  ]
+}

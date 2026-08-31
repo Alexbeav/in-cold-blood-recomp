@@ -1,0 +1,60 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "In Cold Blood"
+id = "SLUS-01294"
+players = 1
+exe = "disc/SLUS_012.94"
+discs = [
+    "disc/disc1.cue",
+    "disc/disc2.cue",
+]
+disc_serials = [
+    "SLUS-01294",
+    "SLUS-01314",
+]
+load_address = "0x80010000"
+entry_pc = "0x80087DE0"
+text_size = "0x001E2000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "disc1.bin"
+cue_name = "disc1.cue"
+boot_exe = "SLUS_012.94"
+known_sizes = [555591792]
+known_md5 = [
+  "42756266fd32297c07ed754e891bb5b4",
+]
+known_sha1 = [
+  "9a33a893574cb28a896691a43ba4c603a0af681a",
+]
+known_crc32 = [
+  "3e3f5bcc",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "in-cold-blood- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "b89de611cb4e68d4d394ae7ec27639f855fbceb9d8d890cf4a141ae4d9d0a217"
